@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine</title>
+    <link rel="stylesheet" href="./style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+<body>
+    <!-- Lottie Animation Preloader -->
+    <div class="preloader">
+        <div class="animate__animated animate__fadeOutUp animate__delay-3s"> <dotlottie-player src="https://lottie.host/91c16d15-b170-4f72-b6ac-e7845ead9ee2/dfnGccRtWm.json" background="transparent" speed="1" style="width: 300px; height: 300px;" autoplay></dotlottie-player></div> 
+    </div>
+
+    <!-- Your website content goes here -->
+    <div class="content">
+        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+       <dotlottie-player src="https://lottie.host/3d64e8f4-553a-4a32-b0de-577ef7ff403b/hatgAAuBbo.json" background="transparent" speed="1"  delay='2' loop autoplay></dotlottie-player>
+       <h2>Will You  Be My Happy Valentine?</h2>
+       <div class="buttons">
+           <div class="button1">
+             <button class="btn-class-name" id="button1" onclick="animateButton1()">
+                <span class="back"></span>
+                <span class="front"></span>
+              </button>
+              <h4 id="yes">
+                Yes
+              </h4>
+            </div>
+            <div class="button2" onclick="animateButton2()">
+              <button class="btn-class-name">
+                <span class="back"></span>
+                <span class="front"></span>
+              </button>
+              <h4>
+                No
+              </h4>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+    <script src="script.js"></script>
+</body>
+</html>

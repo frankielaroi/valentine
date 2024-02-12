@@ -1,0 +1,90 @@
+/* Add any styling you need for the preloader */
+body{
+    background-color:#f07f7f;
+
+}
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff; /* Set the background color you want */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.buttons{
+    margin:2em;
+    display: flex;
+    flex-direction: row;
+}
+.button1 ,.button2{
+    margin: 3.5em;
+}
+h4{
+    font-family:'Courier New', Courier, monospace ;
+    font-size: em;
+}
+h2{
+    font-size: 6vmax;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.btn-class-name {
+    content:'yes';
+    --primary: 255, 90, 120;
+    --secondary: 150, 50, 60;
+    width: 60px;
+    height: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    user-select: none;
+    touch-action: manipulation;
+    outline: 10px solid rgb(var(--primary), .5);
+    border-radius: 100%;
+    position: relative;
+    transition: .3s;
+    margin: 0%;
+  }
+  
+  .btn-class-name .back {
+    content:'yes';
+    background: rgb(var(--secondary));
+    border-radius: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .btn-class-name .front {
+    content:'yes';
+    background: linear-gradient(0deg, rgb(255, 255, 255), 20%, rgb(255, 255, 255) 50%);
+    box-shadow: 0 .5em 1em -0.2em rgba(var(--secondary), .5);
+    border-radius: 100%;
+    position: absolute;
+    border: 1px solid rgb(var(--secondary));
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: inherit;
+    transform: translateY(-15%);
+    transition: .15s;
+    color: whitesmoke;
+  }
+  
+  .btn-class-name:active .front {
+    content:'yes';
+    transform: translateY(0%);
+    box-shadow: 0 0;
+  }
