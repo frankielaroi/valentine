@@ -88,3 +88,9 @@ h2{
     transform: translateY(0%);
     box-shadow: 0 0;
   }
+  .quote-container{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: xx-large;
+    text-align: center;
+      margin-top: 10%;
+  }

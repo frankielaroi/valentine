@@ -17,7 +17,8 @@
         </div>
     </div>
     <div>
-        <div class="image">
+        <div id="image" class="animate__animated animate__fadeInUp animate__delay-1s">
+            <h4 class="animate__animated animate__bounce ">Send your baby a picture  <img src="./love.png" class="animate__animated animate__heartBeat animate__infinite"></h4>
             <input type="file" accept="image/*" id="fileInput">
             <button onclick="uploadPicture()">Upload Picture</button>
         </div>
@@ -68,12 +69,23 @@
 </body>
 </html>
 <style>
+    body{
+        width: 100%;
+    }
+    h4{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: xx-large;
+    text-align: center;
+    margin-top: 10%;
+    }
    dotlottie-player{
     width: fit-content;
     height: 100%;
+    position: absolute;
    } 
-   .image{
+   #image{
     display: flex;
     flex-direction: column;
+    position: absolute;
    }
 </style>
