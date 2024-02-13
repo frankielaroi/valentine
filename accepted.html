@@ -9,83 +9,38 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
-    <div>
-        <div class="">
+    <div class="animation-container">
+        <div class="lottie-player">
             <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
-
-    <dotlottie-player src="https://lottie.host/6e8744ef-7772-4604-9ed7-3a8b90771e18/pGCf8S5AR5.json" background="transparent" speed="1"  loop autoplay></dotlottie-player>
+            <dotlottie-player src="https://lottie.host/6e8744ef-7772-4604-9ed7-3a8b90771e18/pGCf8S5AR5.json" background="transparent" speed="1" loop autoplay></dotlottie-player>
         </div>
     </div>
-    <div>
-        <div id="image" class="animate__animated animate__fadeInUp animate__delay-1s">
-            <h4 class="animate__animated animate__bounce ">Send your baby a picture  <img src="./love.png" class="animate__animated animate__heartBeat animate__infinite"></h4>
-            <input type="file" accept="image/*" id="fileInput">
-            <button onclick="uploadPicture()">Upload Picture</button>
-        </div>
-    </div>
+   
     
-    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-storage.js"></script>
+   
+    
 
-    <script type="module">
-        // Your Firebase configuration
-        const firebaseConfig = {
-          apiKey: "AIzaSyDIxTz0slRBqIlVWsNQjjhsNlA92LA-PcM",
-          authDomain: "valsday-22252.firebaseapp.com",
-          projectId: "valsday-22252",
-          storageBucket: "valsday-22252.appspot.com",
-          messagingSenderId: "849125890976",
-          appId: "1:849125890976:web:d0be8bdfdaf896d6c7e2c5",
-          measurementId: "G-2Q434J4YDX"
-        };
-
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        const storage = firebase.storage();
-
-        function uploadPicture() {
-            const fileInput = document.getElementById('fileInput');
-            const file = fileInput.files[0];
-
-            if (file) {
-                const storageRef = storage.ref();
-                const imagesRef = storageRef.child('images/' + file.name);
-
-                imagesRef.put(file).then((snapshot) => {
-                    console.log('File uploaded successfully!', snapshot);
-                    alert('File uploaded successfully!');
-                }).catch((error) => {
-                    console.error('Error uploading file:', error);
-                    alert('Error uploading file!');
-                });
-            } else {
-                alert('Please select a file to upload.');
-            }
-        }
-        
-    </script>
 </body>
 </html>
+
 <style>
-    body{
+    body {
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .animation-container {
+        position: absolute;
         width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-    h4{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: xx-large;
-    text-align: center;
-    margin-top: 10%;
+
+    .lottie-player {
+        width: fit-content;
+        height: 100%;
     }
-   dotlottie-player{
-    width: fit-content;
-    height: 100%;
-    position: absolute;
-   } 
-   #image{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-   }
-</style>
+
+  
